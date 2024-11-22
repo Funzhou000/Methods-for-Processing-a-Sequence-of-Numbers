@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+bool IsPrime(int n) {
+    if(n == 1) // 1不是质数
+        return false;
+    for(int i = 2; i < n; i++)
+        if(n % i == 0) // 如果n能被i整除，则n不是质数
+            return false;
+    return true; // 如果没有找到因数，则n是质数
+}
+
+int main() {
+    int a = 10;
+    int n;
+    for(n = a; n > 0; n--) {
+        if(IsPrime(n)) {
+            printf("%d ", n); // 打印质数
+        }
+    }
+    return 0; // 程序结束
+}
