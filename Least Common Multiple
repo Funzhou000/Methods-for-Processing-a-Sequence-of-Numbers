@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+int gcd(int a, int b)
+{
+int r=a%b;
+if(0==r)
+  return b;
+else
+return gcd(b,r);
+}
+int main()
+{
+  int x=18;
+  int y=24;
+  int gcdx =gcd(x,y);
+  printf("%d",x*y/gcdx);
+
+  return 0 ;
+}
